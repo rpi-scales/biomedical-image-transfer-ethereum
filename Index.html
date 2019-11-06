@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Certificate Registry DApp</title>
+    <link rel="stylesheet" type="text/css" href="certificate-registry.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/ipfs-api/dist/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <script src="./Config/ContractABI.js"></script>
+    <script src="certificates.js"></script>
+</head>
+
+<body>
+<header id="menu">
+    <a href="#" id="linkHome">Home</a>
+    <a href="#" id="linkSubmitCertificate">Submit Certificate</a>
+    <a href="#" id="linkGetCertificates">View Certificates</a>
+</header>
+
+<main>
+    <section id="loadingBox">Loading ...</section>
+
+    <section id="infoBox"><header>x</header><p>Info</p></section>
+
+    <section id="errorBox"><header>x</header><p>Error</p></section>
+
+    <section id="viewHome">
+        <h1>Certificate Registry</h1>
+        Welcome to the "Certificate Registry" DApp. This distributed app runs on the Ethereum blockchain network and holds a registry of Certificates as Solidity smart contract.
+        <ul>
+            <li>The registry keeps images of Certificates along with their publish date.</li>
+            <li><b>Contract owner</b> can submit new Certificates to be stored on the blockchain.</li>
+            <li><b>Users</b> can view the existence of certain Certificates in the registry.</li>
+        </ul>
+    </section>
+
+    <section id="viewSubmitCertificate">
+        <h1>Submit a Certificate</h1>
+        <p>Contract owners can register (upload) new Certificates to the "Certificate Registry" smart contract on the Ethereum blockchain decentralized network.</p>
+        <input type="file" id="CertificateForUpload" /><br/>
+        <input type="button" id="CertificateUploadButton" value="Submit" />
+    </section>
+
+    <section id="viewGetCertificates">
+        <h1>View Certificates</h1>
+        <p>Blockchain users can view Certificates in the registry on the Ethereum network.</p>
+    </section>
+</main>
+
+<footer>Certificate Registry - JavaScript & Ethereum DApp</footer>
+</body>
+</html>
